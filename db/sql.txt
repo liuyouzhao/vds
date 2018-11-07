@@ -1,0 +1,1 @@
+CREATE TABLE `voc_depot_sys`.`vds_user` ( `user_incid` INT NULL DEFAULT NULL , `user_name` TEXT NULL DEFAULT NULL , `user_password_md5` TEXT NULL DEFAULT NULL , `created_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , INDEX `user_index` (`user_incid`)) ENGINE = InnoDB; 

@@ -1,0 +1,14 @@
+[
+{
+	"spell":"benevolent",
+	"function":"bene(benefit) + volent(志愿者volunteer) --> 慈善的",
+	"property":"adj.",
+	"example":"I want them to come away from here with a faith in other people and a faith in a benevolent God."
+},
+{
+	"spell":"bestow",
+	"function":"best(最好的) + ow(赠与我) --> 赠与",
+	"property":"vt.",
+	"example":"You also bestow love upon her or him"
+}
+]
