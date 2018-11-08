@@ -10,5 +10,1594 @@
 	"function":"best(最好的) + ow(赠与我) --> 赠与",
 	"property":"vt.",
 	"example":"You also bestow love upon her or him"
+},
+{
+	"spell":"uproar",
+	"function":"up(上) + roar(咆哮) --> 喧嚣",
+	"property":"n.",
+	"example":"This of course, will send parents into an uproar"
+},
+{
+	"spell":"inclination",
+	"function":"incline(倾向) + ation(名词后缀) --> 倾向",
+	"property":"n.",
+	"example":"The daughter of my gay friend has a inclination to be militant against other kids."
+},
+{
+	"spell":"charisma",
+	"function":"charis(基督) + ma(圣母玛利亚) --> 神赐的能力",
+	"property":"n.",
+	"example":"Every woman has her own unique brand of charisma."
+},
+{
+	"spell":"opinionated",
+	"function":"opinion(观点) + ated(结果) --> 只认为自己的观点是结果 --> 武断的, 专断的",
+	"property":"adj.",
+	"example":"Avoid being overly opinionated or you will alienate friends."
+},
+{
+	"spell":"tangle",
+	"function":"tangible(切实的,落实的) --> tangle(不得到切实的回答我会一直纠缠你) --> 使纠缠",
+	"property":"vt./n.",
+	"example":"Their thoughts are a tangle of unexamined impulses."
+},
+{
+	"spell":"partiality",
+	"function":"part(部分) --> partial(偏爱的) + ity(名词后缀) --> 偏心",
+	"property":"n.",
+	"example":"The teacher shows partiality to him."
+},
+{
+	"spell":"modulate",
+	"function":"module(模块) + ate(结果) --> 开发完的模块需要调参数 --> 调节",
+	"property":"v.",
+	"example":"Please modulate the sound on the TV."
+},
+{
+	"spell":"corroborate",
+	"function":"corro(correspond相应,符合) + bor(bore烦,钻孔,恼人) + ate(结果) --> 为了知道情况是否符合不厌其烦的证实 --> 证实",
+	"property":"vt.",
+	"example":"Authorities have also recovered a satellite phone that appears to corroborate much of his testimony."
+},
+{
+	"spell":"captivate",
+	"function":"captiv(captive俘虏) + ate(结果) --> 她迷住了我成了她爱情的俘虏 --> 迷住",
+	"property":"vt.",
+	"example":"Fascinating bits of information on the legend or history behind a tea will captivate them."
+},
+{
+	"spell":"manner",
+	"function":"manor庄园 --> 住庄园的人都很注重规矩和风俗 --> 规矩风俗习惯,方法",
+	"property":"n.",
+	"example":"Some frameworks do not work in this manner."
+},
+{
+	"spell":"eschew",
+	"function":"es(escape逃离) + chew(咀嚼) --> 逃到一旁悠哉的吃东西 --> 避开(祸患)",
+	"property":"vt.",
+	"example":"Eschew the news"
+},
+{
+	"spell":"foil",
+	"function":"f + oil(油) --> 用油来衬托 --> 衬托",
+	"property":"vt.",
+	"example":"However, it must be acknowledged, she had faults to foil her gifts."
+},
+{
+	"spell":"glamour",
+	"function":"glam(迷人的) + our(名词动词) --> 魅力,魔力,迷住",
+	"property":"n./vt.",
+	"example":"Especially young people love the competitiveness and the glamour of F1."
+},
+{
+	"spell":"garnish",
+	"function":"gar(garb装扮) + nish(动词后缀) --> 装饰",
+	"property":"vt./n.",
+	"example":"Garnish with lemon or lime slice."
+},
+{
+	"spell":"accustomed",
+	"function":"ac + custom(顾客) + ed --> 要满足顾客的习惯 --> 使习惯于",
+	"property":"v.",
+	"example":"Most men are accustomed to end the conversation in that manner."
+},
+{
+	"spell":"legacy",
+	"function":"leg(legislation历法) + acy(名词) --> 遗产受法律保护 --> 遗产",
+	"property":"n.",
+	"example":"These book are his legacy to the college."
+},
+{
+	"spell":"shirk",
+	"function":"穿上shirt赶紧shirk --> 穿上背心赶紧逃跑 --> 逃避",
+	"property":"v.",
+	"example":"You can't shirk, it's your duty"
+},
+{
+	"spell":"evident",
+	"function":"evidence(证据) --> 有明显的证据 --> 明显的",
+	"property":"adj.",
+	"example":"This focus is evident three areas: process authoring, process access, and process guidance."
+},
+{
+	"spell":"glean",
+	"function":"g + lean(倾斜) --> 把篮子倾斜用来收集 --> 收集",
+	"property":"v.",
+	"example":"So she went out and began to glean in the fields behind the harvesters."
+},
+{
+	"spell":"emaciate",
+	"function":"ema(姨妈) + ci(吃) + ate(结果) --> 来大姨妈的时候吃饭不好 --> 使消瘦",
+	"property":"v.",
+	"example":"To emaciate is to cause to become lean, usually by starvation."
+},
+{
+	"spell":"demeanour",
+	"function":"demean(de加强 + mean意义-->举止) + our(名词后缀) --> 行为举止",
+	"property":"n.",
+	"example":"His demeanour might well be consistent with a concealed emotion."
+},
+{
+	"spell":"exert",
+	"function":"exercise(练习) --> 利用环境来练习 --> exert利用",
+	"property":"vt.",
+	"example":"The influence we exert is powerful."
+},
+{
+	"spell":"tenacious",
+	"function":"ten(十个) + a(扑克牌A) + cious(形容词后缀) --> 打牌拿到十个A --> 顽强的",
+	"property":"adj.",
+	"example":"Victory is among the most tenacious people."
+},
+{
+	"spell":"enthrall",
+	"function":"en(使能) + thrall(奴隶) --> 迷住她让她成为你的性奴隶 --> 迷住",
+	"property":"vt.",
+	"example":"Why does this fable continue to enthrall generation after generation"
+},
+{
+	"spell":"tardy",
+	"function":"tar(压缩包) + d(decompress解压缩) + y(的) --> tar包解压很慢 --> 缓慢的",
+	"property":"adj.",
+	"example":"A tardy arrival is disastrous."
+},
+{
+	"spell":"stunt",
+	"function":"死党的,我是舅舅的死党 --> 舅舅有精湛的技术 --> 绝技,花头",
+	"property":"n./v.",
+	"example":"The Silicon Valley visits seemed like a stunt, but they were prophetic."
+},
+{
+	"spell":"discernible",
+	"function":"discern(识别) + ible(形容词) --> 可辨别的",
+	"property":"adj.",
+	"example":"It's too soon to tell whether there is a discernible and sustainable pattern."
+},
+{	"spell":"forsake",
+	"function":"for(为了) + sake(日本米酒) --> 为了日本米酒我放弃了中国的工作和生活来到日本 --> 放弃",
+	"property":"vt.",
+	"example":"So it's a pity that now you forsake it and, then, start it all over again, wow!"
+},
+{
+	"spell":"stoically",
+	"function":"只多一口 --> 只吃一口饭不贪多 --> 禁欲的,坚忍的",
+	"property":"adv.",
+	"example":"This was not a grim duty to which I stoically resigned."
+},
+{
+	"spell":"blunder",
+	"function":"blunt(迟钝) --> 迟钝犯下大错 --> blunder(大错)",
+	"property":"n./vt.",
+	"example":"He made an awful blunder."
+},
+{
+	"spell":"redeem",
+	"function":"re(再次) + deem(认为视作) --> 再次把你视作爱人 --> 挽回,补偿",
+	"property":"vt.",
+	"example":"He had no way to redeem his furniture out of pawn."
+},
+{
+	"spell":"crumple",
+	"function":"crump(嘎吱声) + le(了) --> 把钱弄皱的嘎吱响了 --> 起皱",
+	"property":"v./n.",
+	"example":"They don't crumple easily, but they do crease when you try."
+},
+{
+	"spell":"tamper",
+	"function":"因为你tamper我所以我in a temper --> 干预",
+	"property":"vt./n.",
+	"example":"Don't tamper with my business."
+},
+{
+	"spell":"pervert",
+	"function":"per(每个人) + vert(转变) --> 使每个人都转变 --> 堕落天使路西法 --> 使堕落,堕落者",
+	"property":"vt./n.",
+	"example":"This guy was a pervert, he was a child molester."
+},
+{
+	"spell":"bent",
+	"function":"奔头儿 --> 很多人把嗜好和爱好当做生活的奔头儿",
+	"property":"n.",
+	"example":"He was bent on success."
+},
+{
+	"spell":"demur",
+	"function":"地魔 --> 在地下反对天堂的魔鬼 --> 抗议, 反对",
+	"property":"n./vi.",
+	"example":"As I demur, another call comes, from the prime minister's office."
+},
+{
+	"spell":"brittle",
+	"function":"fragile和brittle都是脆弱的 --> 易碎的",
+	"property":"adj.",
+	"example":"It's made of glass, brittle but flexible."
+},
+{
+	"spell":"deference",
+	"function":"defer(推迟,服从) + ence(名词后缀) --> 遵从",
+	"property":"n.",
+	"example":"So the age of deference is not quite dead."
+},
+{
+	"spell":"unruly",
+	"function":"un(不) + ruly(有规矩的) --> 不守规矩的",
+	"property":"adj.",
+	"example":"To start with, we need to deal with the large piece of unruly text from above."
+},
+{
+	"spell":"meditative",
+	"function":"medicine(药物)值得人们的meditate(思考) --> meditative(冥想的)",
+	"property":"adj.",
+	"example":"The channels ranged from rock to country to meditative music."
+},
+{
+	"spell":"ken",
+	"function":"啃 --> 学习就像啃硬骨头,才能有真知灼见 --> 见地",
+	"property":"n.",
+	"example":"She is a girl with full of ken."
+},
+{
+	"spell":"scrap",
+	"function":"scratch(抓)成scrap(碎片) --> 碎片",
+	"property":"vi./vt./adj./n.",
+	"example":"We need to turn every scrap of attention into engagement."
+},
+{
+	"spell":"spoliate",
+	"function":"spoli(死暴力) + ate(结果) --> 抢劫",
+	"property":"vt.",
+	"example":"No conquer no spoliate"
+},
+{
+	"spell":"cryptic",
+	"function":"cry(哭,眼泪) + ptic --> 一瓶神秘的迷之眼泪 --> 神秘的",
+	"property":"adj.",
+	"example":"A visit to one of the farms there proved cryptic."
+},
+{
+	"spell":"credulous",
+	"function":"cre(信用卡) + dulous(丢了) --> 轻信骗子信用卡都丢了 --> 轻信的",
+	"property":"adj.",
+	"example":"Credulous people are easily misled by false advertisements."
+},
+{
+	"spell":"mulish",
+	"function":"谬历史 --> 坚持荒谬的历史学家 --> 顽固的",
+	"property":"adj.",
+	"example":"The mulish young man inherited a large fortune."
+},
+{
+	"spell":"engross",
+	"function":"en(使能) + gross(全部的) --> 全神贯注的",
+	"property":"adj.",
+	"example":"The reporter's job is to get the audience engrossed inn the story."
+},
+{
+	"spell":"intercept",
+	"function":"inter(中途) + cept(拦截) --> 拦截",
+	"property":"vt./n.",
+	"example":"Once the missile closes on a target, its active radar guides it to intercept."
+},
+{
+	"spell":"mutinous",
+	"function":"mutiny(母踢你)你要造反了 --> 造反的",
+	"property":"adj.",
+	"example":"Our men grow mutinous day by day."
+},
+{
+	"spell":"evasive",
+	"function":"evade(e外+vade出->逃跑) --> evasive逃避的",
+	"property":"adj.",
+	"example":"He is more likely to be evasive and it will be harder to get him to make any firm commitments."
+},
+{
+	"spell":"instrumental",
+	"function":"instrument(乐器) --> 有用的",
+	"property":"adj.",
+	"example":"The experience was instrumental to the development of his design aesthetic."
+},
+{
+	"spell":"retard",
+	"function":"re(再次) + tard(踏上) --> 再次踏上这片土地我要阻止你! --> 阻止,拖延",
+	"property":"vt./n.",
+	"example":"And I make a solemn oath to myself that nothing will retard my new life's growth."
+},
+{
+	"spell":"redress",
+	"function":"re(再次) + dress(穿上) --> 再次让你穿上衣服 --> 救济你",
+	"property":"vt./n.",
+	"example":"His tome is an attempt to redress the balance."
+},
+{
+	"spell":"charitable",
+	"function":"charity(慈善) + able --> 慈善的",
+	"property":"adj.",
+	"example":"It all belonged to the charitable trust."
+},
+{
+	"spell":"obliging",
+	"function":"oblige(哦不力哥) --> 力哥对我有恩我都不好意思了 --> 体贴的(一旦不和就变成强迫)",
+	"property":"adj",
+	"example":"True. It's not fair. I try to look regretful and obliging."
+},
+{
+	"spell":"deportment",
+	"function":"department(有关部门) 要注意 deportment(行为举止态度)",
+	"property":"n.",
+	"example":"One of the child's peculiar deportment remains yet to be told."
+},
+{
+	"spell":"ruminate",
+	"function":"ru(进入) + min(王敏) + ate(结果) --> 进入王敏的身体后需要深思",
+	"property":"vt./vi",
+	"example":"Don't ruminate on past affronts or injustices."
+},
+{
+	"spell":"brace",
+	"function":"brick砖头 --> brace支柱",
+	"property":"n./vt./vi",
+	"example":"Brace these sagging shelves with more crosspieces."
+},
+{
+	"spell":"eradicate",
+	"function":"e(除) + radicate(生根) --> 根除",
+	"property":"vt.",
+	"example":"The reduction is the result of the global effort to eradicate the disease."
+},
+{
+	"spell":"gainsay",
+	"function":"gain(获得) + say(说) --> 我终于获得说话的权利了,我要否认这些错误观点",
+	"property":"vt./n.",
+	"example":"Who were we to gainsay her decision to relinquish her child?"
+},
+{
+	"spell":"resumption",
+	"function":"resume(恢复) + ption --> 恢复",
+	"property":"n.",
+	"example":"Trade with oil-rich Libya and the resumption of remittances would be a welcome relief."
+},
+{
+	"spell":"meddle",
+	"function":"麦兜,很傻比很喜欢管闲事的那只猪 --> 管闲事",
+	"property":"vi.",
+	"example":"I no longer had to meddle with her."
+},
+{
+	"spell":"fumble",
+	"function":"扶不了,没有东西可以搀扶,只能摸索前行 --> 摸索",
+	"property":"v./n.",
+	"example":"As we all know, people fumble along the way."
+},
+{
+	"spell":"dissipate",
+	"function":"disappear消失 --> dissipate驱散",
+	"property":"v.",
+	"example":"But after a while you get used to it and the discomfort starts to dissipate."
+},
+{
+	"spell":"plunder",
+	"function":"pl(play) + under --> 他们抢劫时两个孩子正在车厢下面玩 --> 抢劫",
+	"property":"v./n.",
+	"example":"Has he come to plunder or appreciate?"
+},
+{
+	"spell":"protract",
+	"function":"pro(前) + tract(束) --> 伸展",
+	"property":"vt.",
+	"example":"Just don't protract the debate any further."
+},
+{
+	"spell":"incapacitate",
+	"function":"in(不能) + capacitate(使能够) --> 使不能",
+	"property":"vt.",
+	"example":"I commanded them before terror could incapacitate me."
+},
+{
+	"spell":"clog",
+	"function":"clog(c++的Clog极其难用是编程的阻碍) --> 阻碍",
+	"property":"v./n.",
+	"example":"Office towers shoot up, and the vehicles clog the roads."
+},
+{
+	"spell":"instigate",
+	"function":"in(进去) +sti(死踢) + gate(大门) --> 进入死踢大门来怂恿你",
+	"property":"vt.",
+	"example":"Over the next week or two, pay attention to the situations and comments that automatically instigate an emotion"
+},
+{
+	"spell":"engulf",
+	"function":"en(使能) + gulf(海湾) --> 海皇波塞冬使用海湾的水吞没了那片大陆",
+	"property":"vt.",
+	"example":"It is said the black hole can engulf everything nearby such as stars"
+},
+{
+	"spell":"endeavor",
+	"function":"en(使) + deavor(dead死人) --> 尽力了",
+	"property":"vt./n.",
+	"example":"They not only make it possible for us to do this but make it a great endeavor due to their support."
+},
+{
+	"spell":"elusive",
+	"function":"elusive的知识需要elucidate阐明 --> 难懂的",
+	"property":"adj.",
+	"example":"Try to catch the elusive charm of the original in translation."
+},
+{
+	"spell":"inure",
+	"function":"in(在) + ur(你的) + e(外) --> 在你家的外要适应环境 --> 适应",
+	"property":"v.",
+	"example":"We should inure ourselves to hard life."
+},
+{
+	"spell":"abortive",
+	"function":"abort(终止) + tive --> 失败的",
+	"property":"adj.",
+	"example":"They knew any abortive action would surely result in my daughter's death."
+},
+{
+	"spell":"intoxicate",
+	"function":"in(进入) + toxic(有毒的) + ate(结果) --> 使中毒使迷醉",
+	"property":"v.",
+	"example":"Sea wind intoxicate."
+},
+{
+	"spell":"ratify",
+	"function":"rat(老鼠) + i(我) + fy(动词) --> 鼠辈不得到我的批准怎么行",
+	"property":"vt.",
+	"example":"But first it will have to ratify the treaty."
+},
+{
+	"spell":"submission",
+	"function":"sub(下面) + mission(任务) --> 服从",
+	"property":"n.",
+	"example":"Submission will pay you better."
+},
+{
+	"spell":"traitor",
+	"function":"trait(特性) + or(人) --> 叛国贼",
+	"property":"n.",
+	"example":"He was depicted as a traitor."
+},
+{
+	"spell":"conciliatory",
+	"function":"conciliate(安抚调和concil就是council有理事会调节的意思) --> 安抚的调和的",
+	"property":"adj.",
+	"example":"He tried to strike a conciliatory tone."
+},
+{
+	"spell":"discourse",
+	"function":"dis(分散) + course(课程) --> 论文演讲",
+	"property":"n./v.",
+	"example":"I gave a discourse on educational reformation."
+},
+{
+	"spell":"bequest",
+	"function":"be(被) +quest(需要) --> 被需要的 --> 遗产",
+	"property":"n.",
+	"example":"It's a priceless bequest."
+},
+{
+	"spell":"prop",
+	"function":"Don't prod me, just prop me.",
+	"property":"vt.",
+	"example":"Don't prod me, just prop me."
+},
+{
+	"spell":"abide",
+	"function":"a + bide(等待) --> 一个等待 --> 忍受",
+	"property":"v.",
+	"example":"I can't abide dishonesty!"
+},
+{
+	"spell":"salvage",
+	"function":"扫危机 --> 扫除危机 --> 海上救援",
+	"property":"vt./n",
+	"example":"We'll pull alongside the ship and put a salvage crew aboard."
+},
+{
+	"spell":"propensity",
+	"function":"pro(前) + pen(笔) + sity --> 用笔向前指着 --> 倾向",
+	"property":"n.",
+	"example":"We have a propensity to merge electronics with anything and everything."
+},
+{
+	"spell":"subjection",
+	"function":"sub(下) +jection(注入) --> 服从",
+	"property":"n.",
+	"example":"The subjection of the Indians took a long time."
+},
+{
+	"spell":"ferret",
+	"function":"A ferret is a detective.我的小柯南是个ferret(飞儿子)",
+	"property":"n./v.",
+	"example":"This is why I strive to ferret out every conceivable observation."
+},
+{
+	"spell":"cram",
+	"function":"cry哭 --> 我背单词都被哭了 --> 死记硬背",
+	"property":"adj./v.",
+	"example":"You can't cram 8 people into that car."
+},
+{
+	"spell":"pending",
+	"function":"pen(笔) + ding(盯) --> 拿着笔盯着 --> 悬而未决的",
+	"property":"v./adj.",
+	"example":"The pending debate should be placed before a larger audience."
+},
+{
+	"spell":"repossess",
+	"function":"re(再) + possess(持有财产) --> 取回",
+	"property":"vt.",
+	"example":"I've been authorised by the court to repossess this property."
+},
+{
+	"spell":"irrepressible",
+	"function":"ir(不可) + repress(镇压) + ible --> 无法压制的",
+	"property":"adj.",
+	"example":"That he is an irrepressible sly fox."
+},
+{
+	"spell":"connivance",
+	"function":"坑奶文思 --> 纵容,默许他的行为",
+	"property":"n.",
+	"example":"The criminals could not have escaped without your connivance."
+},
+{
+	"spell":"budge",
+	"function":"bud(苗) + ge(割) --> 把苗割了移走 --> 移动挪动",
+	"property":"v.",
+	"example":"The government refused to budge."
+},
+{
+	"spell":"stalk",
+	"function":"I stalked towards the stall.",
+	"property":"v.",
+	"example":"I stalked towards the stall."
+},
+{
+	"spell":"turbulent",
+	"function":"turbine(涡轮) --> 涡轮搅拌使混乱 --> 混乱的",
+	"property":"adj.",
+	"example":"In these turbulent times, there is only one answer: unity of purpose."
+},
+{
+	"spell":"relinquish",
+	"function":"re(再一次) + lin(林飞) + qui(惭愧溃败了) --> 林飞总放弃奴隶",
+	"property":"vt.",
+	"example":"This helps the service class instance relinquish the resources it is using."
+},
+{
+	"spell":"unquenchable",
+	"function":"un(不能) + quenchable(熄灭抑制) --> 无法抑制的",
+	"property":"adj.",
+	"example":"The spirit of nature in Mr Walcott’s work is unquenchable."
+},
+{
+	"spell":"resolute",
+	"function":"resolve解决,决定 --> resolute坚决的",
+	"property":"adj.",
+	"example":"We express strong dissatisfaction and resolute opposition to that."
+},
+{
+	"spell":"connive",
+	"function":"坑奶 --> 被纵容惯了 --> 纵容",
+	"property":"vi.",
+	"example":"Some policemen connive at gambling."
+},
+{
+	"spell":"obstinate",
+	"function":"obstacle障碍 --> obstinate倔强的, 倔强的人总是解决问题的障碍",
+	"property":"adj.",
+	"example":"How can you be so obstinate."
+},
+{
+	"spell":"postpone",
+	"function":"post(后面) + pone(玉米饼) --> 拖延给食物 --> 延期",
+	"property":"vt.",
+	"example":"Do not avoid or postpone tasks and activities. "
+},
+{
+	"spell":"plot",
+	"function":"pot(七日杀-锅) --> 我和老婆拿着锅蹲在系统房密谋如何求生 --> 密谋",
+	"property":"n./vi.",
+	"example":"What plot are you brewing?"
+},
+{
+	"spell":"balk",
+	"function":"小孩子玩ball成为了学习的阻碍balk",
+	"property":"n./v.",
+	"example":"The high price is a balk to me."
+},
+{
+	"spell":"irreconcilable",
+	"function":"ir(无法) + conciliate(安抚调和concil就是council有理事会调节的意思) --> 无法安抚的调和的",
+	"property":"adj.",
+	"example":"It seems irreconcilable."
+},
+{
+	"spell":"fragmentary",
+	"function":"fragment(碎片) +ary --> 碎片的",
+	"property":"adj.",
+	"example":"In fact, knowledge of consequences is always fragmentary."
+},
+{
+	"spell":"depredate",
+	"function":"destroy, destruct, devastate, plunder 同义词",
+	"property":"v..",
+	"example":"Fast depredate is the way of leading the new product into market with high price and high promotion costs."
+},
+{
+	"spell":"coddle",
+	"function":"coder程序员 --> coddle宠爱溺爱自己的老婆",
+	"property":"vt.",
+	"example":"I love to coddle babies. I have a little one of my own."
+},
+{
+	"spell":"omit",
+	"function":"(o)得0分 + mit(麻省理工媒体实验室) --> 得0分麻省理工会把你忽略",
+	"property":"vt.",
+	"example":"You can omit this format information."
+},
+{
+	"spell":"avow",
+	"function":"a(一个) + vow(魔兽世界) --> 铜须事件的坦率承认",
+	"property":"vt.",
+	"example":"But whatever the danger, Christ's followers must avow their principles. "
+},
+{
+	"spell":"discern",
+	"function":"discern就是distinguish+concern",
+	"property":"v.",
+	"example":"Discern what is the best."
+},
+{
+	"spell":"haunt",
+	"function":"haul 拖拉 --> haunt 萦绕",
+	"property":"v.",
+	"example":"The memory from the earlier time came out to haunt him."
+},
+{
+	"spell":"forestall",
+	"function":"fore(先) + stall(地毯商铺) --> 先发制人拿下所有店面 --> 占领先机,预先囤积",
+	"property":"vt.",
+	"example":"I needed to engage in any activity I could imagine that would forestall the beginning of adult life."
+},
+{
+	"spell":"entail",
+	"function":"en(使) + tail(尾部) --> 变成尾巴一样的必需品 --> 使必要",
+	"property":"vt./n.",
+	"example":"Does it entail sitting down with a designer?"
+},
+{
+	"spell":"dodge",
+	"function":"dock停靠 --> dodge避开",
+	"property":"v./n.",
+	"example":"After a single shock, the infant mice learned to dodge the danger zone."
+},
+{
+	"spell":"traverse",
+	"function":"trave(travel 旅行横跨) --> traverse 横跨横木",
+	"property":"v./n./adj.",
+	"example":"Several railroads traverse the district."
+},
+{
+	"spell":"kindle",
+	"function":"kindle可以激起人们的读书兴趣",
+	"property":"v.",
+	"example":"And see the peaks of thought kindle with sunrise!"
+},
+{
+	"spell":"rein",
+	"function":"reinforce增强就是支配力量 --> rein支配",
+	"property":"v./n.",
+	"example":"It is difficult to rein a fiery horse."
+},
+{
+	"spell":"encumber",
+	"function":"en(使) + cumber(魁拔, 大魔神, 阻碍人类幸福, 使人类受苦) --> 阻碍妨碍",
+	"property":"vt.",
+	"example":"You shouldn’t let those heavy books encumber you."
+},
+{
+	"spell":"turmoil",
+	"function":"Turmoil and torment.",
+	"property":"n.",
+	"example":"Turmoil and torment."
+},
+{
+	"spell":"defection",
+	"function":"defect缺点 --> defection缺陷, 背叛",
+	"property":"n.",
+	"example":"Since his 1997 defection, Hwang has only been allowed to travel overseas once."
+},
+{
+	"spell":"oblivion",
+	"function":"The Elder Scroll IV, Oblivion",
+	"property":"n.",
+	"example":"It was doomed to oblivion. "
+},
+{
+	"spell":"adjourn",
+	"function":"ad(加强) + journ(journey旅行) --> 延期回公司了 --> 延期",
+	"property":"vt.",
+	"example":"The meeting will adjourn sine die."
+},
+{
+	"spell":"infallible",
+	"function":"in(不) + fallible(易错的) --> 永远正确的",
+	"property":"adj./n.",
+	"example":"These believers say Apple’s judgment on the market is nearly infallible. "
+},
+{
+	"spell":"enigmatic",
+	"function":"enigma(一泥革马,神秘) --> 神秘的",
+	"property":"adj.",
+	"example":"You’re the most enigmatic person I know."
+},
+{
+	"spell":"imprison",
+	"function":"im(进入) + prison(监狱) --> 进监狱了 --> 关押",
+	"property":"vt.",
+	"example":"He has been imprisoned."
+},
+{
+	"spell":"disobedient",
+	"function":"dis(不能) + obedient(obey遵从) --> 无法遵从的",
+	"property":"adj.",
+	"example":"He is a peculiar person who is disobedient."
+},
+{
+	"spell":"deterrent",
+	"function":"defer是推迟deter是阻碍deterrent是阻碍的名词和形容词",
+	"property":"n.adj.",
+	"example":"There was no no real deterrent to government's forces."
+},
+{
+	"spell":"devour",
+	"function":"地握,巫医的地面出手抓人吞噬敌人",
+	"property":"v.",
+	"example":"Blackhole devours asteroid."
+},
+{
+	"spell":"harry",
+	"function":"Harry Potter 折磨陶工",
+	"property":"vt.",
+	"example":"I don't want to harry you."
+},
+{
+	"spell":"negate",
+	"function":"negative 否定的 --> negate 否定",
+	"property":"n./v.",
+	"example":"Interoperability problems can negate organizational initiatives. "
+},
+{
+	"spell":"limitative",
+	"function":"limit限制",
+	"property":"adj.",
+	"example":"Limitative parts ensure that actions can started freely."
+},
+{
+	"spell":"seclusion",
+	"function":"seclude(隔绝) --> 隔绝偏僻",
+	"property":"n.",
+	"example":"Living a life in seclusion seems still the authentic way to attain the ultimate happiness."
+},
+{
+	"spell":"indomitable",
+	"function":"in(不能) + domitable(可控制的) --> 不屈不挠的",
+	"property":"adj.",
+	"example":"The human spirit is indomitable."
+},
+{
+	"spell":"mangle",
+	"function":"读作 蛮狗 --> 乱砍 破坏",
+	"property":"vt.",
+	"example":"Don't mangle public property."
+},
+{
+	"spell":"purge",
+	"function":"pure纯净的 --> purge净化",
+	"property":"v./n.",
+	"example":"The land will purge itself of the impurity by vomiting them out."
+},
+{
+	"spell":"enigma",
+	"function":"一泥革马 --> 是个迷",
+	"property":"n.",
+	"example":"It's an enigma."
+},
+{
+	"spell":"temperance",
+	"function":"temperate温和的适度的有节制的",
+	"property":"n./adj.",
+	"example":"This trait is the emotional analogue of temperance."
+},
+{
+	"spell":"coercive",
+	"function":"可扼死 --> 强制的",
+	"property":"adj.",
+	"example":"A coercive humanitarian intervention would be complicated and costly."
+},
+{
+	"spell":"elude",
+	"function":"e(外) + lude(流) --> 避开",
+	"property":"vi.",
+	"example":"One must live with time and die with it, or else elude it for a greater life."
+},
+{
+	"spell":"hasten",
+	"function":"黑森 --> 黑暗森林赶紧跑 --> 使加快 催促",
+	"property":"vt.",
+	"example":"The crisis gives us the opportunity to hasten this process."
+},
+{
+	"spell":"havoc",
+	"function":"哈voc(单词海洋) --> 对精神产生极大的破坏 --> 大破坏",
+	"property":"n./v.",
+	"example":"The earthquake wreaked havoc on the city."
+},
+{
+	"spell":"treason",
+	"function":"trea(treat对待) + son(儿子) --> 这样对待儿子是叛国罪",
+	"property":"n.",
+	"example":"The couple were tried for treason."
+},
+{
+	"spell":"entangle",
+	"function":"en(使得) + tangle(纠缠) --> 使纠缠",
+	"property":"vt.",
+	"example":"Don't entangle me anymore."
+},
+{
+	"spell":"secluded",
+	"function":"seclude(隔绝) --> 偏僻的",
+	"property":"adj.",
+	"example":"Living in a secluded house far from the downtown is not a peculiar manner of life."
+},
+{
+	"spell":"rummage",
+	"function":"rum(古怪的) + mage(法师) --> 翻找搜查 零星杂物",
+	"property":"v./n.",
+	"example":"The old lady began to rummage in her pocket for her spectacles."
+},
+{
+	"spell":"bewitch",
+	"function":"be(被) + witch(巫婆) --> 施法于",
+	"property":"vt.",
+	"example":"It intoxicates and bewitches me."
+},
+{
+	"spell":"offhand",
+	"function":"off(关闭) + hand(手 处理) --> 不预先处理 --> 随便的 无准备的",
+	"property":"adj./adv",
+	"example":"It was said in a rather offhand manner."
+},
+{
+	"spell":"pierce",
+	"function":"fierce是凶猛 pierce是洞察和刺穿",
+	"property":"vi.",
+	"example":"Conservative cartoonists are struggling to pierce Mr Obama’s armor. "
+},
+{
+	"spell":"intercede",
+	"function":"interfere干预 --> intercede调停",
+	"property":"vi.",
+	"example":"She had found powerful allies who promised to intercede."
+},
+{
+	"spell":"squash",
+	"function":"crash撞碎 --> squash挤压 壁球",
+	"property":"v./n.",
+	"example":"Her bare legs, toned from a winter of squash playing, were pale but smooth."
+},
+{
+	"spell":"bigoted",
+	"function":"bit(大) + ot(下副本OT的) + ed --> 顽固的",
+	"property":"adj.",
+	"example":"He was the first person to prove mainstream pop audiences were less bigoted than some had feared."
+},
+{
+	"spell":"negligence",
+	"function":"neglect疏忽忽视 --> 疏忽的名词",
+	"property":"n.",
+	"example":"The traffic accident was allegedly due to negligence."
+},
+{
+	"spell":"obscure",
+	"function":"ob(反) +scure(清楚) --> 使模糊",
+	"property":"adj./n./v.",
+	"example":"The meaning is still obscure to me."
+},
+{
+	"spell":"persevere",
+	"function":"per(每个人) + servere(严重严格的) --> 不屈不挠的",
+	"property":"vt.",
+	"example":"Persevere and you'll succeed."
+},
+{
+	"spell":"jettison",
+	"function":"jet(射) + ti(踢) + son(儿子) --> 又射又踢自己的儿子这是要抛弃孩子啊",
+	"property":"vt./n.",
+	"example":"Let's jettison some historical baggage."
+},
+{
+	"spell":"perseverance",
+	"function":"persevere不屈不挠的 --> 名词形式",
+	"property":"n.",
+	"example":"He's a clever man,but fails in perseverance."
+},
+{
+	"spell":"inclined",
+	"function":"倾向的形容词形式",
+	"property":"adj.",
+	"example":"She was somewhat inclined to fat after forty."
+},
+{
+	"spell":"transpire",
+	"function":"tran(移动) + spire(螺旋钻头) --> 泄露 蒸发 排出",
+	"property":"v.",
+	"example":"The plants transpire to give off more water vapor."
+},
+{
+	"spell":"impotence",
+	"function":"importance重要的事情是不要impotence阳痿",
+	"property":"n.",
+	"example":"You can blame the impotence of commercial culture. "
+},
+{
+	"spell":"detain",
+	"function":"detain拘留了留下了stain污点",
+	"property":"vt.",
+	"example":"He has been detained for 2 months."
+},
+{
+	"spell":"tease",
+	"function":"tea茶叶se颜色茶叶要有颜色 --> 你在逗弄我吗?",
+	"property":"vi.",
+	"example":"I tease her."
+},
+{
+	"spell":"riddle",
+	"function":"睿逗 这个人又睿智又逗乐 喜欢讲谜语",
+	"property":"n.",
+	"example":"The riddle was at last unriddled. "
+},
+{
+	"spell":"denial",
+	"function":"deny否定 --> denial否认",
+	"property":"n.",
+	"example":"The Republican burden is their record of denial, evasion, and neglect."
+},
+{
+	"spell":"smash",
+	"function":"crash撞碎 smash破碎",
+	"property":"n./v.",
+	"example":"We will smash any aggression."
+},
+{
+	"spell":"fetter",
+	"function":"ferret侦探 fetter羁绊 柯南的羁绊",
+	"property":"vt./n.",
+	"example":"You may imprison my body, actually could not fetter my mind."
+},
+{
+	"spell":"rebellion",
+	"function":"rebel(叛军) --> rebellion 叛乱",
+	"property":"n.",
+	"example":"The armed rebellion was quelled only in a few days."
+},
+{
+	"spell":"disrupt",
+	"function":"Frostpunk: You can disrupt the house any time as you want.",
+	"property":"vt./adj.",
+	"example":"What is missed is that the new patterns and platforms can be used to disrupt your business anyway."
+},
+{
+	"spell":"subjugate",
+	"function":"sub(下) + ju(猪) + gate(门) --> 被征服的败军首领要被下猪门",
+	"property":"vt.",
+	"example":"Napoleon's first task is to subjugate his neighbors in Piedmont-Sardinia."
+},
+{
+	"spell":"overthrow",
+	"function":"过度的投掷 --> 推翻",
+	"property":"vt./n.",
+	"example":"They conspired to overthrow the government."
+},
+{
+	"spell":"tacit",
+	"function":"他说的 --> 默许的",
+	"property":"adj.",
+	"example":"Manners being tacit and concealed are called latent rules."
+},
+{
+	"spell":"fortify",
+	"function":"fort强 --> fortify加强",
+	"property":"vt.",
+	"example":"We were hastened to fortify our fortress."
+},
+{
+	"spell":"equivocal",
+	"function":"equi(公平的) --> vocal(我靠!公平个屁) --> 莫能两可的",
+	"property":"adj.",
+	"example":"The archaeological evidence for ancient cookery is equivocal."
+},
+{
+	"spell":"attainment",
+	"function":"attainable 可得到的 --> attainment获得的成就",
+	"property":"n.",
+	"example":"People chase attainment."
+},
+{
+	"spell":"triumph",
+	"function":"从青海自驾游回杭州用了tri天凯旋而归",
+	"property":"n./vi.",
+	"example":"An air of triumph exuded from her."
+},
+{
+	"spell":"disintegration",
+	"function":"dis(不) + integration(完整) --> 分崩",
+	"property":"n.",
+	"example":"Our country is in disintegration."
+},
+{
+	"spell":"concession",
+	"function":"concess(承认 妥协 让步) --> 妥协的名词",
+	"property":"n.",
+	"example":"We can not make heavy concession to the matter."
+},
+{
+	"spell":"escort",
+	"function":"Frostpunk: Escort the refugees back to our city.",
+	"property":"vt./n.",
+	"example":"Escort the refugees back to our city."
+},
+{
+	"spell":"evasion",
+	"function":"evade(逃避) --> 名词形式 逃避",
+	"property":"n.",
+	"example":"Don't let this issue be your evasion's excuse."
+},
+{
+	"spell":"stray",
+	"function":"stay or stray, the choice is yours.",
+	"property":"vi./n./adj.",
+	"example":"Don't make you stray in the darkness."
+},
+{
+	"spell":"embroider",
+	"function":"em(下功夫) + bro(兄弟) + ider --> 下功夫给自家兄弟绣花",
+	"property":"v.",
+	"example":"There is also a nice casket to embroider various gem in addition."
+},
+{
+	"spell":"frail",
+	"function":"fragile易受伤害的 --> frail少女",
+	"property":"n./adj.",
+	"example":"She is not a fragile frail."
+},
+{
+	"spell":"confound",
+	"function":"con(共同) + found(奠基) --> 阿里每个人都想当领域的奠基人没人想做螺丝钉 混乱",
+	"property":"vt.",
+	"example":"To replace thought with reverie is to confound a poison with a food. "
+},
+{
+	"spell":"countermeasure",
+	"function":"counter(面对) + measure(测量方法) --> 对策",
+	"property":"n.",
+	"example":"Do we have any strategy or countermeasure to deal with this?"
+},
+{
+	"spell":"rumble",
+	"function":"兰博rumble基尼 轰隆隆的驶来",
+	"property":"n./v.",
+	"example":"The rumble of distant thunder seemed to echo my inner turmoil."
+},
+{
+	"spell":"trammel",
+	"function":"tram(揣着) + mel(猫) --> 你把你家猫揣在兜里带出门束缚它的行动",
+	"property":"n./vt.",
+	"example":"The invention discloses a fishing type trammel net."
+},
+{
+	"spell":"confine",
+	"function":"con(共同) + fine(安好) --> Frostpunk画地为牢限制大家行动为了安好的生活下去",
+	"property":"vt./n.",
+	"example":"The refiner defined a definite confine with her fine finger."
+},
+{
+	"spell":"habitually",
+	"function":"My habitual. 我的习惯呐",
+	"property":"adv.",
+	"example":"Your character is essentially the sum of your habits; it is how you habitually act."
+},
+{
+	"spell":"overrule",
+	"function":"over(在上) + rule(管理规定) --> 统治 否决",
+	"property":"vt.",
+	"example":"Your emotions overrule your stomach and fatigue."
+},
+{
+	"spell":"champion",
+	"function":"The Champion League.",
+	"property":"adj./n.",
+	"example":"The Champion League."
+},
+{
+	"spell":"foment",
+	"function":"fo(佛) + ment(门) --> 佛门弟子煽动反朝廷暴乱",
+	"property":"vt.",
+	"example":"Foment a mass exodus of key executives who actually know how to run the giant computer company."
+},
+{
+	"spell":"ponder",
+	"function":"ponderous沉重的 --> ponder沉思",
+	"property":"v.",
+	"example":"We can ponder over the ways and means for raising funds before the construction work starts."
+},
+{
+	"spell":"commence",
+	"function":"开始着手 获得学位的意思",
+	"property":"v.",
+	"example":"The performances will commence in a minute."
+},
+{
+	"spell":"surmount",
+	"function":"sur(超越) + mount(爬山) --> 越过山峰",
+	"property":"vt.",
+	"example":"We were able to surmount so many obstacles."
+},
+{
+	"spell":"stroll",
+	"function":"str(street大街上) + roll(滚动) --> 大街上滚动 压马路 --> 闲逛",
+	"property":"n./v.",
+	"example":"Stroll down Narodni to pick up the pulse of Prague and then pause beside the theatre."
+},
+{
+	"spell":"stomach",
+	"function":"胃 忍耐",
+	"property":"n./vt",
+	"example":"Her stomach churned with nausea."
+},
+{
+	"spell":"bait",
+	"function":"bai(baidu公司) + t(腾讯) --> 白领和学生的诱饵",
+	"property":"n./vt.",
+	"example":"The fish took the bait!"
+},
+{
+	"spell":"penchant",
+	"function":"pen(拿着笔) + chant(唱歌) --> 嗜好 倾向",
+	"property":"n.",
+	"example":"The brain also has a penchant for symmetry."
+},
+{
+	"spell":"quell",
+	"function":"que(缺) + ll(两个擎天柱) --> 少两个顶梁柱起义就被镇压和平息了",
+	"property":"vt.",
+	"example":"This medicine will quell your sore throat."
+},
+{
+	"spell":"maze",
+	"function":"在迷宫中遇到妹子(maze) --> 迷宫",
+	"property":"n./vt.",
+	"example":"We need to find a path through a complicated maze."
+},
+{
+	"spell":"shackle",
+	"function":"shack(煞客小屋) --> 小屋来禁锢性奴隶",
+	"property":"n./vt.",
+	"example":"Superstition is a great shackle on men's minds."
+},
+{
+	"spell":"heedless",
+	"function":"等于headless不走心不过脑少一根弦",
+	"property":"adj.",
+	"example":"My wife is always heedless."
+},
+{
+	"spell":"vanquish",
+	"function":"van(范海辛) + quish(窥视) --> 范海辛窥视吸血鬼 为了征服打败他们",
+	"property":"vt.",
+	"example":"You must vanquish your fears."
+},
+{
+	"spell":"dogmatic",
+	"function":"dogma(狗它妈 教条) --> 教条的",
+	"property":"adj.",
+	"example":"It seems as if folks are more dogmatic than ever, but maybe the pundits are creating that illusion."
+},
+{
+	"spell":"perceive",
+	"function":"per(每个人) + ceive(受到) --> 察觉",
+	"property":"v.",
+	"example":"The concept reality means to each of us what we perceive, what we experience."
+},
+{
+	"spell":"labyrinth",
+	"function":"laby(拉比 犹太人牧师) + rinth(润色) --> 谜一样神圣的 --> 迷宫",
+	"property":"n.",
+	"example":"The labyrinth is the organ in your inner ear that enables you to maintain balance."
+},
+{
+	"spell":"disavowal",
+	"function":"avow公开承认 --> disavowal 否定",
+	"property":"n.",
+	"example":"I know that disavowal is an unusual form of betrayal."
+},
+{
+	"spell":"endorse",
+	"function":"en(使用) + dorse(雨打) --> 互相认可才站在一个屋檐下避雨",
+	"property":"vt.",
+	"example":"Democrats generally endorse the cap-and-trade plan in the bill."
+},
+{
+	"spell":"ravage",
+	"function":"rav(RAV4车) + age(年代) --> 日本车满大街事故多发毁坏路况",
+	"property":"n./v.",
+	"example":"The forests were ravaged by fire."
+},
+{
+	"spell":"barricade",
+	"function":"barrier 障碍物 --> barricade设路障",
+	"property":"n./v.",
+	"example":"Police made the barricades."
+},
+{
+	"spell":"prompt",
+	"function":"快速的, 准时到达, 提示促进",
+	"property":"adj./adv./vt.",
+	"example":"I'll prompt her if she forgets her lines."
+},
+{
+	"spell":"dissemble",
+	"function":"assemble召集 --> dissemble隐藏",
+	"property":"v.",
+	"example":"Assemble the army then dissemble it."
+},
+{
+	"spell":"discernible",
+	"function":"discern辨别 + ible --> 可辨别的",
+	"property":"adj.",
+	"example":"The contour of the picture is still discernible."
+},
+{
+	"spell":"annihilate",
+	"function":"annihi(按你嗨) + late(晚一些的) --> 晚一点在按倒你嗨 --> 先歼灭敌人",
+	"property":"v.",
+	"example":"They want to annihilate us because we were different."
+},
+{
+	"spell":"uprising",
+	"function":"up(上) + rising(升起旗帜) --> 揭竿起义",
+	"property":"n./v./adj.",
+	"example":"The popular uprising unfolding in Iran right now really is remarkable."
+},
+{
+	"spell":"locomote",
+	"function":"lo(搂着) + co(口) + mote(升起) --> 头部移动给我口交 --> 移动",
+	"property":"vt.",
+	"example":"Continue to locomote using your heels only for two minutes."
+},
+{
+	"spell":"erroneous",
+	"function":"error错误 --> erroneous错误的",
+	"property":"adj.",
+	"example":"What you have done is fully erroneous."
+},
+{
+	"spell":"defiant",
+	"function":"def(定义) + i(我) + ant(蚂蚁) --> 把我定义成蝼蚁 --> 蔑视的 目中无人的 挑衅的",
+	"property":"adj.",
+	"example":"It stood on the edge of a cliff, grim and defiant, seemingly clinging to rock."
+},
+{
+	"spell":"obedience",
+	"function":"obey屈服 --> obedience 服从",
+	"property":"n.",
+	"example":"You are learning true obedience and deference."
+},
+{
+	"spell":"insubordinate",
+	"function":"in(不) + subordinate(从属) --> 不屈从的",
+	"property":"adj.",
+	"example":"My wife is an insubordinate frail."
+},
+{
+	"spell":"efface",
+	"function":"ef(去掉) + face(脸 面) --> 抹掉",
+	"property":"vt.",
+	"example":"The lapse of year will never efface that scene of ruin from my memory."
+},
+{
+	"spell":"feign",
+	"function":"fei(林飞) + gn(搞呢 锻炼呢 学习呢) --> 都是假装的",
+	"property":"v.",
+	"example":"Many, in fact, feign love of life to evade love itself."
+},
+{
+	"spell":"despatch",
+	"function":"des(下达) + patch(打补丁) --> 派发 发送",
+	"property":"n./vt.",
+	"example":"A notice sent by cable shall be deemed to have been served on the day following the despatch of the cable."
+},
+{
+	"spell":"bereave",
+	"function":"be(被) + reave(剥夺) --> 使失去",
+	"property":"vt.",
+	"example":"Even if they rear children, I will bereave them of every one."
+},
+{
+	"spell":"illegible",
+	"function":"il(不) + legible(清晰的) --> 不可辨认的",
+	"property":"adj.",
+	"example":"However, erosion and a crack in the stone make the end of the passage almost illegible."
+},
+{
+	"spell":"carriage",
+	"function":"carry运 --> carriage运送",
+	"property":"n.",
+	"example":"If you have a carriage, bring it."
+},
+{
+	"spell":"leash",
+	"function":"use leash to lash",
+	"property":"n./vt.",
+	"example":"He use leash to lash his son."
+},
+{
+	"spell":"exclusion",
+	"function":"exclude排出 --> exclusion排出",
+	"property":"n.",
+	"example":"It is not feasible to search all documents at the exclusion of one term."
+},
+{
+	"spell":"conceal",
+	"function":"conceal or reveal",
+	"property":"vt.",
+	"example":"I did not conceal anything from him."
+},
+{
+	"spell":"prone",
+	"function":"be prone to",
+	"property":"adj.",
+	"example":"Unfortunately, women may be more prone to the feeling than men because of how we relate to each other."
+},
+{
+	"spell":"entrap",
+	"function":"en(使能) + trap陷阱 --> 使落入陷阱",
+	"property":"vt.",
+	"example":"The hunters used nets to entrap the lion."
+},
+{
+	"spell":"evade",
+	"function":"e(外) + vade(出) --> 逃跑 逃避",
+	"property":"v.",
+	"example":"They evade paying taxes by living abroad."
+},
+{
+	"spell":"assiduous",
+	"function":"as(因为) + si(死) + du(读) + ous(的) --> 因为不聪明死读书就必须勤勉",
+	"property":"adj.",
+	"example":"We study assiduous, live pleased and interesting. I love our school."
+},
+{
+	"spell":"meagre",
+	"function":"米格不如F22 虚弱的",
+	"property":"adj.",
+	"example":"To supplement their meagre income, often he used to go fishing with his friends."
+},
+{
+	"spell":"profess",
+	"function":"教授professor公开声明profess",
+	"property":"v.",
+	"example":"I profess that I was surprised at the news."
+},
+{
+	"spell":"negligent",
+	"function":"neglect --> negligent",
+	"property":"adj.",
+	"example":"My wife is a negligent woman."
+},
+{
+	"spell":"circumscribe",
+	"function":"circum(圆圈) + scribe(划 画) --> 画地为牢",
+	"property":"vt.",
+	"example":"The principal has requested all teachers to circumscribe failures in red on the report cards."
+},
+{
+	"spell":"futile",
+	"function":"附体了 --> 被妖怪附体 --> 变得无用了",
+	"property":"adj.",
+	"example":"Love is the foundation of life for without it, every other thing is futile."
+},
+{
+	"spell":"shun",
+	"function":"shun(伤) --> 受伤了要避免运动 回避激烈的事件",
+	"property":"vt.",
+	"example":"If it confuses you in your flower-weaving， I will shun your lonely garden."
+},
+{
+	"spell":"fallible",
+	"function":"fall(陨落 失败) + ible --> 容易失败的",
+	"property":"adj.",
+	"example":"He thinks because all our knowledge comes from experience, it's inherently fallible."
+},
+{
+	"spell":"rout",
+	"function":"rush out --> 击溃",
+	"property":"v./n.",
+	"example":"It's not clear at what point this will turn into a cull or a rout."
+},
+{
+	"spell":"steadfast",
+	"function":"stead(稳定) + fast(快) --> 稳准狠 --> 坚定的 给柯南喂饭的技巧",
+	"property":"adj.",
+	"example":"Let me thank our many partners, in both initiatives, for their steadfast commitment and support."
+},
+{
+	"spell":"gild",
+	"function":"use gold to gild",
+	"property":"vt.",
+	"example":"Paint it with colors, gild it with gold."
+},
+{
+	"spell":"vestige",
+	"function":"为啥提哥 --> prestige在他面前提哥哥那时候有威望 现在没了 --> 只剩残余了",
+	"property":"n.",
+	"example":"This last vestige of rural life has since owned defeat and slunk away ashamed and unnoticed."
+},
+{
+	"spell":"gainful",
+	"function":"gain(获得) + ful --> 只知道取得不知道付出 --> 唯利是图的",
+	"property":"adj.",
+	"example":"In addition, the crises will further erode young people’s ability to find gainful employment."
+},
+{
+	"spell":"incite",
+	"function":"in(里面) + cite(引用) --> 刺激",
+	"property":"vt.",
+	"example":"In other words, they will incite the armed peasants against the advanced workers."
+},
+{
+	"spell":"dispose",
+	"function":"动词名词  处理",
+	"property":"n./v.",
+	"example":"They dispose of the city's waste in the sea. "
+},
+{
+	"spell":"rupture",
+	"function":"rupt断了 --> 碎片",
+	"property":"v./n.",
+	"example":"In the event of a large rupture, the system would vent directly to the atmosphere."
+},
+{
+	"spell":"prolong",
+	"function":"pro(前) + long(长) --> 向前长 --> 延长",
+	"property":"vt.",
+	"example":"What factors shorten, prolong or amplify the effect of deception."
+},
+{
+	"spell":"lash",
+	"function":"use leash to lash",
+	"property":"v./n.",
+	"example":"He use leash to lash his son."
+},
+{
+	"spell":"lure",
+	"function":"柳儿 --> 少女的诱惑",
+	"property":"vt./n.",
+	"example":"He attempted to lure her away from husband and family."
+},
+{
+	"spell":"obtrude",
+	"function":"intrude伸出长棍 强迫她obtrude",
+	"property":"v.",
+	"example":"It is unwise for an outsider to obtrude his opinions into a family quarrel. "
+},
+{
+	"spell":"decline",
+	"function":"下降斜坡衰落谢绝",
+	"property":"n./v.",
+	"example":"The decline in sales embarrassed our company."
+},
+{
+	"spell":"treachery",
+	"function":"treat(对待) + chery --> 背叛她了 --> 背叛",
+	"property":"n.",
+	"example":"A network of hate, treachery, and fanaticism was closing around him."
+},
+{
+	"spell":"elicit",
+	"function":"explicit明显的 --> elicit 引出",
+	"property":"vt.",
+	"example":"And he does things I would never do. He lies to people himself, for example, to elicit the truth."
+},
+{
+	"spell":"recalcitrant",
+	"function":"recalculate(重新计算) --> 我的顽抗的人我必须证明我算的对",
+	"property":"n./adj.",
+	"example":"There were the disagreements about how to handle the disintegration of Yugoslavia and the often recalcitrant stance of Russia."
+},
+{
+	"spell":"acquiescence",
+	"function":"acquire(得到) + scence(景) --> 走后门了默许我坐在有景色的窗户边",
+	"property":"n.",
+	"example":"Yet some suggest that this is a sign of naiveté or acquiescence to these countries’ repression of their own people."
+},
+{
+	"spell":"convoy",
+	"function":"Frostpunk: Convoy the refugees back to home.",
+	"property":"n./v.",
+	"example":"I'm expecting to hear a convoy of cars pulling up, but nothing, silence."
+},
+{
+	"spell":"procure",
+	"function":"pro(先) + cure(治愈) --> 先把病治好就能取得成功了",
+	"property":"v.",
+	"example":"That her social status would procure love from these people. And that she would never be alone."
+},
+{
+	"spell":"mediate",
+	"function":"medi(中间) + ate(结果) --> 间接的 调停",
+	"property":"adj./v.",
+	"example":"The government must mediate the struggle for water resources."
+},
+{
+	"spell":"lurk",
+	"function":"为了luck好运我lurk潜伏在一旁",
+	"property":"vt./n.",
+	"example":"Underneath this interface lurk two vision systems that work in parallel."
+},
+{
+	"spell":"extricate",
+	"function":"ex(外) + tric(三个) + ate(结果) --> 排出3人去解救你",
+	"property":"vt.",
+	"example":"We expect him to extricate our country from this before he leaves office."
+},
+{
+	"spell":"rapacious",
+	"function":"repay(还钱) + cious --> 总要人还钱 人家没欠你钱 --> 贪婪的",
+	"property":"adj.",
+	"example":"Locals often have bitter memories of rapacious Western colonialists and Arab slave traders."
+},
+{
+	"spell":"transcend",
+	"function":"transc(到达) + end(尽头) --> 胜过 超越",
+	"property":"vt.",
+	"example":"To free your mind you have to transcend the judge and the victim."
+},
+{
+	"spell":"snag",
+	"function":"s + nag(膝盖) --> 有障碍",
+	"property":"n./v.",
+	"example":"But unfortunately there's a snag."
+},
+{
+	"spell":"embellish",
+	"function":"em(利用) + bell(铃铛) + ish --> 装饰",
+	"property":"v.",
+	"example":"But people do tend to embellish their avatars somewhat."
 }
 ]

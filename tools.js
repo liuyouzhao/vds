@@ -13,7 +13,9 @@ function insert_words_from_jsonfile(file) {
 		//console.log(strdata);
 		var json = JSON.parse(strdata);
 		console.log(json);
-		dal.insert_new_words(json);
+		dal.insert_new_words( function(err, result) {
+			},
+			json);
 
 		dal.deinit();
 	});

@@ -1,1 +1,35 @@
-CREATE TABLE `voc_depot_sys`.`vds_user` ( `user_incid` INT NULL DEFAULT NULL , `user_name` TEXT NULL DEFAULT NULL , `user_password_md5` TEXT NULL DEFAULT NULL , `created_time` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP , INDEX `user_index` (`user_incid`)) ENGINE = InnoDB; 
+## The vocabulary table=============================
+CREATE TABLE `vds_vocabulary` ( 
+	`id` int(11) NOT NULL AUTO_INCREMENT, 
+	`voc_spell` varchar(128) NOT NULL UNIQUE, 
+	`voc_function` text, 
+	`voc_property` text, 
+	`voc_example` text, 
+	`creat_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP, 
+	`update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, 
+	PRIMARY key(id) 
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 
+
+
+## The User table=============================
+CREATE TABLE `vds_user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`user_name` varchar(128) NOT NULL UNIQUE,
+	`user_password` text,
+	`creat_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+	`update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY key(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+## The Familiarization table=============================
+CREATE TABLE `vds_familiarization` (
+	`id` int(11) NOT NULL AUTO_INCREMENT,
+	`user_name` varchar(128) NOT NULL,
+	`voc_spell` varchar(128) NOT NULL,
+	`fami_score` varchar(128) NOT NULL,
+	`fami_reviewtimes` int(11),
+	`creat_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+	`update_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY key(id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

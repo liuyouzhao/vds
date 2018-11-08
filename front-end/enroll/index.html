@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+	<title>Enroll Page</title>
+
+	<!-- Meta-Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<!-- Style --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+
+
+
+</head>
+<!-- //Head -->
+
+<!-- Body -->
+<body>
+
+	<h1>Enroll Form</h1>
+	<iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
+	<div class="container w3layouts agileits">
+
+		<div class="login w3layouts agileits">
+			<h2>Enroll Vocabulary</h2>
+			<form target="nm_iframe">
+				<input id="ipt_spell" type="search" Name="world_spell" placeholder="单词" required=""/>
+				<input id="ipt_function" type="text" Name="world_function" placeholder="记忆法" required=""/>
+				<input id="ipt_sentence" type="text" Name="world_Sentence" placeholder="例句" required=""/>
+				<input id="ipt_days" type="number" Name="world_Sentence" placeholder="已练习次数(天)" required=""/>
+			</form>
+			<ul class="tick w3layouts agileits">
+				<li>
+					<input type="checkbox"  id= "ckb_n" value="" />
+					<label for="ckb_n"><span></span>non</label>
+					<input type="checkbox"  id= "ckb_vt" value="" />
+					<label for="ckb_vt"><span></span>vt</label>
+					<input type="checkbox"  id= "ckb_vi" value="" />
+					<label for="ckb_vi"><span></span>vi</label>
+					<input type="checkbox"  id= "ckb_adj" value="" />
+					<label for="ckb_adj"><span></span>adj</label>
+				</li>
+				<li>
+					<input type="checkbox"  id= "ckb_adv" value="" />
+					<label for="ckb_adv"><span></span>adv</label>
+					<input type="checkbox"  id= "ckb_prev" value="" />
+					<label for="ckb_prev"><span></span>prev</label>
+				</li>
+			</ul>
+			<div class="send-button w3layouts agileits">
+				<form  target="nm_iframe">
+					<input type="submit" value="Enroll This Word" onclick="enroll_word()">
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+ 		<div class="register w3layouts agileits">
+			<h2>In Depot</h2>
+			<div class="textarea">
+				<h3 id="show_spell"></h3>
+				<h4 id="show_property"></h4>
+				<h4 id="show_function"></h4>
+				<h4 id="show_sentence"></h4>
+			</div>
+			<div class="delete-button w3layouts agileits">
+				<form  target="nm_iframe">
+					<input type="submit" value="Delete" onclick="delete_word()">
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="clear"></div>
+
+	</div>
+	<div class="footer w3layouts agileits">
+		<p>Copyright &copy; Powered by Steven Liu. Vocabulary Depot System</p>
+	</div>
+
+</body>
+<script type="text/javascript" src="../jslib/ajax.js"></script>
+<script type="text/javascript">
+
+var spell = document.getElementById("ipt_spell");
+var func = document.getElementById("ipt_function");
+var example = document.getElementById("ipt_sentence");
+var days = document.getElementById("ipt_days");
+
+var ckb_n = document.getElementById("ckb_n");
+var ckb_vt = document.getElementById("ckb_vt");
+var ckb_vi = document.getElementById("ckb_vi");
+var ckb_adj = document.getElementById("ckb_adj");
+var ckb_adv = document.getElementById("ckb_adv");
+var ckb_prev = document.getElementById("ckb_prev");
+
+function enroll_word() {
+//encodeURIComponent()
+	/*
+	{
+		"spell":"charisma",
+		"function":"charis(基督) + ma(圣母玛利亚) --> 神赐的能力",
+		"property":"n.",
+		"example":"Every woman has her own unique brand of charisma."
+	},
+	*/
+	var json = {};
+	var property = "";
+	if(ckb_n.checked)
+		property = property + "n.";
+	if(ckb_vt.checked)
+		property = property + "vt.";
+	if(ckb_vi.checked)
+		property = property + "vi.";
+	if(ckb_adj.checked)
+		property = property + "adj.";
+	if(ckb_adv.checked)
+		property = property + "adv.";
+	if(ckb_prev.checked)
+		property = property + "prev.";
+
+	json["spell"] = spell.value;
+	json["function"] = func.value;
+	json["property"] = property;
+	json["example"] = example.value;
+	json["days"] = days.value;
+
+	console.log(json);
+	var strjson = JSON.stringify(json);
+	var url = "/api?func=enroll_word&data=" + strjson;
+	encodeURIComponent(url);
+
+	ajax_get(url, function(result) {
+		alert(result);
+	});
+}
+
+function delete_word() {
+	var yesno = confirm("");
+}
+
+</script>
+<!-- //Body -->
+
+</html>
