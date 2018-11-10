@@ -124,16 +124,16 @@ h2 {
 h3 {
     font-size: 45px;
     text-align: left;
-    color: #000000;
-    font-weight: 100;
+    color: rgba(0, 0, 0, 1.0);
+    font-weight: bolder;
     margin-bottom: 20px;
 }
 
 h4 {
-    font-size: 25px;
+    font-size: 15px;
     text-align: left;
-    color: #060606;
-    font-weight: 100;
+    color: rgba(0, 0, 0, 1.0);
+    font-weight: normal;
     margin-bottom: 20px;
 }
 

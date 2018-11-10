@@ -31,7 +31,9 @@
 		<div class="login w3layouts agileits">
 			<h2>Enroll Vocabulary</h2>
 			<form target="nm_iframe">
-				<input id="ipt_spell" type="search" Name="world_spell" placeholder="单词" required=""/>
+				<input id="ipt_spell" type="search" Name="world_spell" placeholder="单词" required=""  list="candi_list" onchange="on_spell_finished()" oninput="check_exist_spell(this.value)" />
+				<datalist id="candi_list"> 
+			    </datalist>
 				<input id="ipt_function" type="text" Name="world_function" placeholder="记忆法" required=""/>
 				<input id="ipt_sentence" type="text" Name="world_Sentence" placeholder="例句" required=""/>
 				<input id="ipt_days" type="number" Name="world_Sentence" placeholder="已练习次数(天)" required=""/>
@@ -63,11 +65,7 @@
 		</div>
  		<div class="register w3layouts agileits">
 			<h2>In Depot</h2>
-			<div class="textarea">
-				<h3 id="show_spell"></h3>
-				<h4 id="show_property"></h4>
-				<h4 id="show_function"></h4>
-				<h4 id="show_sentence"></h4>
+			<div class="textarea" id="show_board">
 			</div>
 			<div class="delete-button w3layouts agileits">
 				<form  target="nm_iframe">
@@ -86,12 +84,14 @@
 
 </body>
 <script type="text/javascript" src="../jslib/ajax.js"></script>
+<script type="text/javascript" src="../jslib/cookies.js"></script>
 <script type="text/javascript">
 
 var spell = document.getElementById("ipt_spell");
 var func = document.getElementById("ipt_function");
 var example = document.getElementById("ipt_sentence");
 var days = document.getElementById("ipt_days");
+var candi_list = document.getElementById("candi_list");
 
 var ckb_n = document.getElementById("ckb_n");
 var ckb_vt = document.getElementById("ckb_vt");
@@ -100,8 +100,127 @@ var ckb_adj = document.getElementById("ckb_adj");
 var ckb_adv = document.getElementById("ckb_adv");
 var ckb_prev = document.getElementById("ckb_prev");
 
+var show_board = document.getElementById("show_board");
+
+var words_to_propose_array = {};
+var check_timeout_handler = null;
+
+function __reset_propose_list() {
+	words_to_propose_array = {};
+	while(candi_list.childNodes.length > 0) {
+		candi_list.removeChild(candi_list.childNodes[0]);
+	}
+
+	var str_cookie_history = get_cookie("search_bar_history");
+	if(!str_cookie_history)
+		return;
+	var obj_cookie_history = JSON.parse(str_cookie_history);
+
+	for(var i = 0; i < obj_cookie_history.length; i ++) {
+		var new_opt = document.createElement("option");
+		new_opt.value = obj_cookie_history[i]["v"];
+		candi_list.appendChild(new_opt);
+	}
+}
+
+function __remote_propose_list(remote_propose_words) {
+
+	for(var i = 0; i < remote_propose_words.length; i ++) {
+		if(words_to_propose_array[remote_propose_words[i]] == null) {
+			var new_opt = document.createElement("option");
+			new_opt.value = remote_propose_words[i];
+			candi_list.appendChild(new_opt);
+			words_to_propose_array[remote_propose_words[i]] = 1;
+		}
+	}
+}
+
+function __show_word_board(spell) {
+	var data = {};
+	data["spell"] = spell;
+	var str_data = JSON.stringify(data);
+	var url = "/api?func=query_word_info&data=" + str_data;
+	encodeURIComponent(url);
+	ajax_get(url, function(result) {
+		json = JSON.parse(result);
+		console.log(json);
+
+		if(json["result"]["status"] == "success") {
+			var msg = json["result"]["message"];
+			var board_txt = msg[0];
+			show_board.innerHTML = "<h3>" + board_txt["voc_spell"] + "</h3>" + 
+								   "<h4>" + board_txt["voc_function"] + "</h4>" + 
+								   "<h4>" + board_txt["voc_property"] + "</h4>" + 
+								   "<h4>" + board_txt["voc_example"] + "</h4>";
+		}
+	});
+}
+
+function __show_word_board_if_needed(arr, spell) {
+	for(var i = 0; i < arr.length; i ++) {
+		if(arr[i] == spell) {
+			var data = {};
+			data["spell"] = spell;
+			var str_data = JSON.stringify(data);
+			var url = "/api?func=query_word_info&data=" + str_data;
+			encodeURIComponent(url);
+			ajax_get(url, function(result) {
+				json = JSON.parse(result);
+				console.log(json);
+
+				if(json["result"]["status"] == "success") {
+
+					var msg = json["result"]["message"];
+					var board_txt = msg[0];
+					show_board.innerHTML = "<h3>" + board_txt["voc_spell"] + "</h3>" + 
+										   "<h4>" + board_txt["voc_function"] + "</h4>" + 
+										   "<h4>" + board_txt["voc_property"] + "</h4>" + 
+										   "<h4>" + board_txt["voc_example"] + "</h4>";
+				}
+			});
+		}
+	}
+}
+
+function check_exist_spell(spell) {
+	if(check_timeout_handler != null) {
+		window.clearTimeout(check_timeout_handler);
+	}
+
+	if(spell.length == 0) {
+		__reset_propose_list();
+		return;
+	}
+
+	check_timeout_handler = window.setTimeout(function() {
+		var data = {};
+		data["spell"] = spell;
+		var str_data = JSON.stringify(data);
+		var url = "/api?func=search&data=" + str_data;
+		encodeURIComponent(url);
+		ajax_get(url, function(result) {
+			json = JSON.parse(result);
+			console.log(json);
+
+			if(json["result"]["status"] == "success") {
+				var arr = [];
+				var msg = json["result"]["message"];
+				for(var i = 0; i < msg.length; i ++) {
+					arr[i] = msg[i]["voc_spell"];
+				}
+				__remote_propose_list(arr);
+				__show_word_board_if_needed(arr, spell);
+			}
+		});
+		
+	}, 200);
+}
+
+function on_spell_finished() {
+	__reset_propose_list();
+}
+
 function enroll_word() {
-//encodeURIComponent()
 	/*
 	{
 		"spell":"charisma",
@@ -137,7 +256,7 @@ function enroll_word() {
 	encodeURIComponent(url);
 
 	ajax_get(url, function(result) {
-		alert(result);
+		__show_word_board(spell.value);
 	});
 }
 
@@ -145,6 +264,7 @@ function delete_word() {
 	var yesno = confirm("");
 }
 
+__reset_propose_list();
 </script>
 <!-- //Body -->
 

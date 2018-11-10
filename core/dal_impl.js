@@ -13,6 +13,15 @@ function __do_mysql_connection(__cb) {
 	mysql_connection.connect(function (err, result) {
 		__cb(err, result);
 	});
+
+	mysql_connection.on('error', function(err) {
+		if(err.code === 'PROTOCOL_CONNECTION_LOST') {
+            logger.error('db error onset reconnection:' + err.message);
+            __do_mysql_connection();
+        } else {
+            throw err;
+        }
+	});
 }
 
 
@@ -52,7 +61,16 @@ function start_transaction(methods, daos, stepdone, callback) {
 			}
 
 			if(stack_id >= 0) {
-				stepdone(stack_id);
+				var cease = stepdone(stack_id, err, result);
+				if(cease) {
+					mysql_connection.rollback(function(err_rb) {
+						console.log('TRANSACTION ROLLBACK - ', err_rb);
+						if(err_rb)
+							throw err_rb;
+			    	});
+			    	callback(err, false);
+			    	return;
+				}
 			}
 			stack_id ++;
 
@@ -128,6 +146,42 @@ function biz_update_word_days(practise_dao, on_next) {
 	    on_next(err, result);
 	});
 }
+
+function biz_update_word_attributes(words_dao, on_next) {
+	var sql_head = "UPDATE `vds_vocabulary` SET `voc_function`=?,`voc_property`=?,`voc_example`=? WHERE `voc_spell`=?"
+	var sql_values = [
+		words_dao.function, 
+		words_dao.property, 
+		words_dao.example,
+		words_dao.spell
+	];
+	mysql_connection.query(sql_head, sql_values, function(err, result) {
+	    on_next(err, result);
+	});
+}
+
+function search_words(spell_dao, on_finish) {
+	var sql_head = "SELECT voc_spell FROM `vds_vocabulary` WHERE voc_spell LIKE ?";
+	var sql_value = spell_dao.spell + "%";
+	mysql_connection.query(sql_head, sql_value, function(err, result) {
+		if(err) {
+			console.log(err);
+		}
+	    on_finish(err, result);
+	});
+}
+
+function query_word_info(spell_dao, on_finish) {
+	var sql_head = "SELECT * FROM `vds_vocabulary` WHERE voc_spell=?";
+	var sql_value = spell_dao.spell;
+	mysql_connection.query(sql_head, sql_value, function(err, result) {
+		if(err) {
+			console.log(err);
+		}
+	    on_finish(err, result);
+	});
+}
+
 /*
 new_words(json):
 [
@@ -201,5 +255,8 @@ module.exports = {
 	biz_insert_new_word,
 	biz_insert_new_practise,
 	biz_update_word_days,
+	biz_update_word_attributes,
+	search_words,
+	query_word_info,
 	deinit
 }
