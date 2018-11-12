@@ -1,33 +1,65 @@
 
 /*-- Reset Code --*/
 
-	html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
-	article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
-	ol,ul{list-style:none;padding:0;margin:0;}
-	blockquote,q{quotes:none;}
-	blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
-	table{border-collapse:collapse;border-spacing:0;}
-	a{text-decoration:none;}
-	.txt-rt{text-align:right;}
-	.txt-lt{text-align:left;}
-	.txt-center{text-align:center;}
-	.float-rt{float:right;}
-	.float-lt{float:left;}
-	.clear{clear:both;}
-	.pos-relative{position:relative;}
-	.pos-absolute{position:absolute;}
-	.vertical-base{vertical-align:baseline;}
-	.vertical-top{vertical-align:top;}
-	.underline{	padding-bottom:3px;	border-bottom: 1px solid #eee;}
-	nav.vertical ul li{display:block;}
-	nav.horizontal ul li{display: inline-block;}
-	img{max-width:100%;}
+    html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+    article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+    ol,ul{list-style:none;padding:0;margin:0;}
+    blockquote,q{quotes:none;}
+    blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+    table{border-collapse:collapse;border-spacing:0;}
+    a{text-decoration:none;}
+    .txt-rt{text-align:right;}
+    .txt-lt{text-align:left;}
+    .txt-center{text-align:center;}
+    .float-rt{float:right;}
+    .float-lt{float:left;}
+    .clear{clear:both;}
+    .pos-relative{position:relative;}
+    .pos-absolute{position:absolute;}
+    .vertical-base{vertical-align:baseline;}
+    .vertical-top{vertical-align:top;}
+    .underline{	padding-bottom:3px;	border-bottom: 1px solid #eee;}
+    nav.vertical ul li{display:block;}
+    nav.horizontal ul li{display: inline-block;}
+    img{max-width:100%;}
 
 /*-- Reset Code --*/
 
 
 
 /*-- Index-Page-Styling --*/
+#menu {
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgba(10, 10, 10, 0.77);
+    border: 2px ridge rgba(238, 238, 238, 0.13);
+    -moz-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    -webkit-box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    box-shadow: 0 -5px 10px 1px rgba(16, 16, 16, 0.57);
+    border-bottom: none;
+    border-bottom-left-radius: initial;
+    border-bottom-right-radius: initial;
+}
+#menu li{
+    margin-top: 8px;
+    margin-left: 8px;
+    padding-left: 8px;
+    padding-top: 8px;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+    background-color: transparent;
+}
+
+#menu li a{
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent;
+    color: #CCC;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -57,6 +89,30 @@ h1 {
     letter-spacing: 4px;
     margin: 60px 0;
     color: #FFFFFF;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: left;
+    color: #FFFFFF;
+    font-weight: 100;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 45px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1.0);
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+h4 {
+    font-size: 15px;
+    text-align: left;
+    color: rgba(0, 0, 0, 1.0);
+    font-weight: normal;
+    margin-bottom: 20px;
 }
 
 .container {
@@ -111,30 +167,6 @@ h1 {
 
 :-ms-input-placeholder {
     color: #CCC;
-}
-
-h2 {
-    font-size: 35px;
-    text-align: left;
-    color: #FFFFFF;
-    font-weight: 100;
-    margin-bottom: 20px;
-}
-
-h3 {
-    font-size: 45px;
-    text-align: left;
-    color: rgba(0, 0, 0, 1.0);
-    font-weight: bolder;
-    margin-bottom: 20px;
-}
-
-h4 {
-    font-size: 15px;
-    text-align: left;
-    color: rgba(0, 0, 0, 1.0);
-    font-weight: normal;
-    margin-bottom: 20px;
 }
 
 ul.tick {
@@ -309,11 +341,6 @@ input[type="text"], input[type="checkbox"] {
     border-width: thin;
     cursor: pointer;
     outline: none;
-/*   transition:0.5s all;
-    -webkit-transition:0.5s all;
-    -moz-transition:0.5s all;
-    -o-transition:0.5s all;
-    -ms-transition:0.5s all; */
     text-decoration: none;
 }
 
@@ -411,6 +438,8 @@ input[type="text"], input[type="checkbox"] {
 .footer a:hover {
     color: #FFF;
 }
+
+
 
 /*-- Index-Page-Styling --*/
 
@@ -650,7 +679,6 @@ input[type="text"], input[type="checkbox"] {
         font-size: 12.4px;
     }
 }
-
 
 
 /*--- Responsive Code ---*/

@@ -4,18 +4,24 @@
 
 <!-- Head -->
 <head>
-
 	<title>Enroll Page</title>
 
 	<!-- Meta-Tags -->
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<script type="application/x-javascript"> 
+		addEventListener("load", function() { 
+			setTimeout(hideURLbar, 0); 
+		}, false); 
+		function hideURLbar(){ 
+			window.scrollTo(0,1); 
+		} 
+	</script>
 	<!-- //Meta-Tags -->
 
-	<!-- Style --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-
+	<!-- Style --> 
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
 
 
 </head>
@@ -23,20 +29,29 @@
 
 <!-- Body -->
 <body>
+	<ul  id="menu">
+		<li><a href="./index.html">Enroll</a></li>
+		<li><a href="../practise/index.html">Practise</a></li>
+		<li><a href="../depot/index.html">Depot</a></li>
+		<li><a href="../login/index.html">Sign In</a></li>		
+	</ul>
 
 	<h1>Enroll Form</h1>
 	<iframe id="id_iframe" name="nm_iframe" style="display:none;"></iframe>
 	<div class="container w3layouts agileits">
 
 		<div class="login w3layouts agileits">
-			<h2>Enroll Vocabulary</h2>
+	<!-- 		<h2>Enroll Vocabulary</h2> -->
 			<form target="nm_iframe">
 				<input id="ipt_spell" type="search" Name="world_spell" placeholder="单词" required=""  list="candi_list" onchange="on_spell_finished()" oninput="check_exist_spell(this.value)" />
 				<datalist id="candi_list"> 
 			    </datalist>
 				<input id="ipt_function" type="text" Name="world_function" placeholder="记忆法" required=""/>
 				<input id="ipt_sentence" type="text" Name="world_Sentence" placeholder="例句" required=""/>
-				<input id="ipt_days" type="number" Name="world_Sentence" placeholder="已练习次数(天)" required=""/>
+				<input id="ipt_section" type="search" Name="world_Sentence" placeholder="章节" required="" style="width:100%" list="section_list"/>
+				<datalist id="section_list">
+			    </datalist>
+				<input id="ipt_days" type="number" Name="world_Sentence" placeholder="已练习次数(天)" required="" style="width:50%"/>
 			</form>
 			<ul class="tick w3layouts agileits">
 				<li>
@@ -91,7 +106,9 @@ var spell = document.getElementById("ipt_spell");
 var func = document.getElementById("ipt_function");
 var example = document.getElementById("ipt_sentence");
 var days = document.getElementById("ipt_days");
+var section = document.getElementById("ipt_section");
 var candi_list = document.getElementById("candi_list");
+var section_list = document.getElementById("section_list");
 
 var ckb_n = document.getElementById("ckb_n");
 var ckb_vt = document.getElementById("ckb_vt");
@@ -123,6 +140,12 @@ function __reset_propose_list() {
 	}
 }
 
+function __reset_section_list() {
+	while(section_list.childNodes.length > 0) {
+		section_list.removeChild(section_list.childNodes[0]);
+	}
+}
+
 function __remote_propose_list(remote_propose_words) {
 
 	for(var i = 0; i < remote_propose_words.length; i ++) {
@@ -147,9 +170,14 @@ function __show_word_board(spell) {
 
 		if(json["result"]["status"] == "success") {
 			var msg = json["result"]["message"];
-			var board_txt = msg[0];
+			var board_txt = msg["word_info"][0];
+			var section_arr = msg["section"];
+			var section_txt = "";
+			for(var j = 0; j < section_arr.length; j ++) {
+				section_txt = section_txt + section_arr[j]["section_id"];
+			}
 			show_board.innerHTML = "<h3>" + board_txt["voc_spell"] + "</h3>" + 
-								   "<h4>" + board_txt["voc_function"] + "</h4>" + 
+								   "<h4>" + board_txt["voc_function"] + " [" + section_txt + "]</h4>" + 
 								   "<h4>" + board_txt["voc_property"] + "</h4>" + 
 								   "<h4>" + board_txt["voc_example"] + "</h4>";
 		}
@@ -171,15 +199,47 @@ function __show_word_board_if_needed(arr, spell) {
 				if(json["result"]["status"] == "success") {
 
 					var msg = json["result"]["message"];
-					var board_txt = msg[0];
+					var board_txt = msg["word_info"][0];
+					var section_arr = msg["section"];
+					var section_txt = "";
+					for(var j = 0; j < section_arr.length; j ++) {
+						section_txt = section_txt + section_arr[j]["section_id"];
+					}
 					show_board.innerHTML = "<h3>" + board_txt["voc_spell"] + "</h3>" + 
-										   "<h4>" + board_txt["voc_function"] + "</h4>" + 
+										   "<h4>" + board_txt["voc_function"] + " [" + section_txt + "]</h4>" + 
 										   "<h4>" + board_txt["voc_property"] + "</h4>" + 
 										   "<h4>" + board_txt["voc_example"] + "</h4>";
 				}
 			});
 		}
 	}
+}
+
+function __get_all_sections_update_ui() {
+	var data = {};
+	var str_data = JSON.stringify(data);
+	var url = "/api?func=get_all_sections&data=" +str_data;
+	encodeURIComponent(url);
+	ajax_get(url, function(result) {
+		json = JSON.parse(result);
+		console.log(json);
+
+		if(json["result"]["status"] == "success") {
+			var arr = [];
+			var msg = json["result"]["message"];
+			for(var i = 0; i < msg.length; i ++) {
+				arr[i] = "[" + msg[i]["section_id"] + "] " + msg[i]["section_name"];
+			}
+			
+			for(var i = 0; i < arr.length; i ++) {
+				if(words_to_propose_array[arr[i]] == null) {
+					var new_opt = document.createElement("option");
+					new_opt.value = arr[i];
+					section_list.appendChild(new_opt);
+				}
+			}
+		}
+	});
 }
 
 function check_exist_spell(spell) {
@@ -220,6 +280,15 @@ function on_spell_finished() {
 	__reset_propose_list();
 }
 
+/*
+return section_id
+*/
+function __unwrap_section_info(section_info) {
+	var infos = section_info.split(' ');
+	var section_id = infos[0].substring(1, infos[0].length - 1);
+	return section_id;
+}
+
 function enroll_word() {
 	/*
 	{
@@ -249,6 +318,7 @@ function enroll_word() {
 	json["property"] = property;
 	json["example"] = example.value;
 	json["days"] = days.value;
+	json["section_id"] = __unwrap_section_info(section.value);
 
 	console.log(json);
 	var strjson = JSON.stringify(json);
@@ -264,7 +334,15 @@ function delete_word() {
 	var yesno = confirm("");
 }
 
-__reset_propose_list();
+
+window.onload = function() {
+	__reset_propose_list();
+	__reset_section_list();
+
+	__get_all_sections_update_ui();
+
+}
+
 </script>
 <!-- //Body -->
 

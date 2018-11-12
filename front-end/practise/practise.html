@@ -2,6 +2,9 @@
 <head>
 	<meta http-equiv="Access-Control-Allow-Origin" content="*">
 </head>
+<body>
+	<iframe src="./components/searchbar.html" style="height:auto;width:100%;"></iframe>
+	<input id="section_input" stype="width:50%"/>
 	<textarea id="gather_area" style="width:100%;height:40%">
 	</textarea>
 	<button onclick="begin_test()">
@@ -35,7 +38,8 @@
 			</tr>
 	</table>
 
-
+</body>
+<script type="text/javascript" src="../jslib/ajax.js"></script>
 <script type="text/javascript">
 
 var g_words = [];
@@ -50,6 +54,7 @@ var ui_test_show = document.getElementById("test_word");
 var ui_learnt_bt = document.getElementById("learnt_bt");
 var ui_forgot_bt = document.getElementById("forgot_bt");
 var ui_textarea = document.getElementById("gather_area");
+var ui_input = document.getElementById("section_input");
 
 function init()
 {
@@ -242,34 +247,29 @@ function forgot()
  	next_random();
 }
 
-function load_test()
+function load_test_by_group()
 {
-	ajax_get(function(content) {
-		ui_textarea.value = content;
+	var data = {};
+	data["group_info"] = ui_input.value;
+	var str_data = JSON.stringify(data);
+	var url = "/api?func=query_word_info&data=" + str_data;
+	encodeURIComponent(url);
+	ajax_get(url, function(result) {
+		json = JSON.parse(result);
+		console.log(json);
+
+		if(json["result"]["status"] == "success") {
+			var arr = [];
+			var msg = json["result"]["message"];
+			for(var i = 0; i < msg.length; i ++) {
+				arr[i] = msg[i]["voc_spell"];
+				ui_textarea.value = ui_textarea.value + arr[i] + "\n";
+			}
+		}
+		else {
+			alert(json);
+		}
 	});
 }
-
-
-function ajax_get(callback)
-{
-	var ajax = new XMLHttpRequest();
-	ajax.open('get','https://hjweb.oss-cn-hangzhou.aliyuncs.com/vcbl/vac1.txt', true);
-	ajax.send();
-
-	ajax.onreadystatechange = function () {
-   		if (ajax.readyState == 4 && ajax.status == 200) {
-
-			//console.log("respone: ", ajax.readyState, ajax.status);
-			var text = ajax.responseText;
-			callback(text);
-			//console.log(text);
-		}
-		else
-		{
-			console.log(ajax);
-		}
-	}
-}
-
 </script>
 </html>
