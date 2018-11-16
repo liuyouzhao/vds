@@ -1,5 +1,7 @@
 const dal = require('./dal_impl.js');
 const __step__ = require('../thirdparty/step.js');
+const sm_practise = require('./submission/practise.js')
+
 
 function init(callback) {
 	callback(true);
@@ -28,6 +30,94 @@ function __transact_machine(session, func, data) {
 
 	switch(func) {
 	case 'bind_user':
+	break;
+	case 'add_word_practise':
+		var params = {
+			voc_spell : data["spell"],
+			voc_strength : data["strength"],
+			voc_score : data["score"],
+			voc_deviance : data["deviance"]
+		};
+		dal.insert_new_practise_word(params, function (err, result) {
+			if(err) {
+				__on_exception(session, err);
+			}
+			else {
+				__on_ok(session, result);
+			}
+		});
+	break;
+	case 'confirm':
+		var final_result = {};
+		var tmp_params = {};
+		/* learnt is 1, forgot is -1*/
+		var learnt_or_forgot = data["learnt"];
+		tmp_params["strength"] = null;
+		tmp_params["deviance"] = null;
+		tmp_params["score"] = null;
+		var practise_dao = {
+								voc_spell : data["spell"],
+								voc_strength : tmp_params["strength"],
+								voc_deviance : tmp_params["deviance"],
+								voc_score : tmp_params["score"]
+							};
+		dal.start_transaction(
+			[
+				dal.biz_query_practise,
+				dal.biz_update_practise
+			],
+			[
+				{
+					voc_spell : data["spell"]
+				},
+				practise_dao
+			],
+			function (step, err, result) {
+				if(step == 0 && result.length == 0) {
+					console.log("TANSACTION STEP - ", step, "[LOGICALLY_CEASE]");
+					final_result["exception"] = "[QUERY] Empty";
+					divert_method = "add_word_practise";
+					divert_data = data;
+					divert_data["strength"] = 0;
+					divert_data["deviance"] = 1;
+					divert_data["score"] = learnt_or_forgot == 1 ? 10 : -10;
+					return dal.transact_stat_CEASE;
+				}
+				else if(step == 0) {
+					tmp_params["strength"] = result[0]["voc_strength"];
+					tmp_params["deviance"] = result[0]["voc_deviance"];
+					tmp_params["score"] = result[0]["voc_score"];
+
+					var new_practise_value = {};
+					/* Update practise values */
+					if(learnt_or_forgot == 1) {
+						new_practise_value = sm_practise.confirm_learnt(tmp_params["strength"], 
+																		tmp_params["deviance"], 
+																		tmp_params["score"]);
+					}
+					else {
+						new_practise_value = sm_practise.confirm_forgot(tmp_params["strength"], 
+																		tmp_params["deviance"], 
+																		tmp_params["score"]);
+					}
+					practise_dao.voc_strength = new_practise_value["strength"];
+					practise_dao.voc_deviance = new_practise_value["deviance"];
+					practise_dao.voc_score = new_practise_value["score"];
+				}
+				console.log("TANSACTION STEP - ", step, "[DONE]", result);
+				return dal.transact_stat_CONTINUE;
+			},
+			function (err, finished) {
+				if(finished) {
+					__on_ok(session, final_result);
+				}
+				else if(divert_method != null) {
+					__transact_machine(session, divert_method, divert_data);
+				}
+				else if(err) {
+					__on_exception(session, err);
+				}
+			});
 	break;
 	case 'search':
 		dal.search_words(

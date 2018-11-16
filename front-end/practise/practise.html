@@ -2,11 +2,7 @@
 <head>
 	<meta http-equiv="Access-Control-Allow-Origin" content="*">
 </head>
-<body>
-	<iframe src="./components/searchbar.html" style="height:auto;width:100%;"></iframe>
-	<input id="section_input" stype="width:50%"/>
-	<textarea id="gather_area" style="width:100%;height:40%">
-	</textarea>
+	<textarea id="gather_area" style="width:100%;height:40%"></textarea>
 	<button onclick="begin_test()">
 		Begin!
 	</button>
@@ -38,8 +34,8 @@
 			</tr>
 	</table>
 
-</body>
 <script type="text/javascript" src="../jslib/ajax.js"></script>
+<script type="text/javascript" src="../jslib/cookies.js"></script>
 <script type="text/javascript">
 
 var g_words = [];
@@ -54,7 +50,6 @@ var ui_test_show = document.getElementById("test_word");
 var ui_learnt_bt = document.getElementById("learnt_bt");
 var ui_forgot_bt = document.getElementById("forgot_bt");
 var ui_textarea = document.getElementById("gather_area");
-var ui_input = document.getElementById("section_input");
 
 function init()
 {
@@ -123,6 +118,16 @@ function valid_word(word)
 	return word.length > 0;
 }
 
+function is_duplicate(words, index) {
+	var target = words[index];
+	for( var i = index - 1; i >= 0; i -- ) {
+		if(target == words[i]) {
+			return true;
+		}
+	}
+	return false;
+}
+
 function begin_test()
 {
 	var temp_words = [];
@@ -138,6 +143,9 @@ function begin_test()
 	{
 		for(var i = 0; i < deviance.length; i ++)
 		{
+			if(is_duplicate(deviance, i) == true) {
+				continue;
+			}
 			var new_struct = {
 				txt : deviance[i],
 				sta : 0
@@ -218,14 +226,22 @@ function learnt()
 	}
 
 	lock_button();
-	window.setTimeout(function() {
-		unlock_button();
-	}, 800);
+
 
 	g_words[g_current_cursor].sta = 1;
 	g_learnt ++;
 	g_last_random = -1;
 	g_deducted = true;
+
+	confirm(g_words[g_current_cursor].txt, 1, function(err) {
+		if(err) {
+			alert(JSON.stringify(err));
+		}
+		window.setTimeout(function() {
+			unlock_button();
+		}, 300);
+	});
+
 	next_random();
 }
 
@@ -244,32 +260,48 @@ function forgot()
  	g_words[g_current_cursor].sta = 0;
  	g_last_random = g_current_random;
  	g_deducted = false;
+
+	confirm(g_words[g_current_cursor].txt, -1, function(err) {
+		if(err) {
+			alert(JSON.stringify(err));
+		}
+		window.setTimeout(function() {
+			unlock_button();
+		}, 300);
+	});
+
  	next_random();
 }
 
-function load_test_by_group()
+function load_test()
 {
+	ajax_get(function(content) {
+		ui_textarea.value = content;
+	});
+}
+
+/* learnt = 1 is remembered, -1 is forgot*/
+function confirm(spell, learnt, cb) {
 	var data = {};
-	data["group_info"] = ui_input.value;
+	data["spell"] = spell;
+	data["learnt"] = learnt;
 	var str_data = JSON.stringify(data);
-	var url = "/api?func=query_word_info&data=" + str_data;
+	var url = "/api?func=confirm&data=" + str_data;
 	encodeURIComponent(url);
 	ajax_get(url, function(result) {
 		json = JSON.parse(result);
 		console.log(json);
 
 		if(json["result"]["status"] == "success") {
-			var arr = [];
-			var msg = json["result"]["message"];
-			for(var i = 0; i < msg.length; i ++) {
-				arr[i] = msg[i]["voc_spell"];
-				ui_textarea.value = ui_textarea.value + arr[i] + "\n";
-			}
+			console.log(json);
+			cb(null);
 		}
 		else {
-			alert(json);
+			cb(json);
 		}
 	});
 }
+
+
 </script>
 </html>

@@ -271,7 +271,55 @@ function query_word_info(spell_dao, on_finish) {
 	});
 }
 
+function insert_new_practise_word(practise_dao, on_finish) {
+	var sql_head = "INSERT INTO `vds_practise`(`voc_spell`, `voc_strength`, `voc_score`, `voc_deviance`) VALUES (?)";
+	var sql_values = [  practise_dao.voc_spell,
+						practise_dao.voc_strength,
+						practise_dao.voc_score,
+						practise_dao.voc_deviance ];
 
+	mysql_connection.query(sql_head, [sql_values], function(err,result) {
+		if(err) {
+			console.log(err);
+		}
+	    on_finish(err, result);
+	});
+}
+
+function biz_query_practise(practise_dao, on_next) {
+	var sql_head = "SELECT * FROM `vds_practise` WHERE `voc_spell`=?";
+	var sql_values = practise_dao.voc_spell;
+	mysql_connection.query(sql_head, sql_values, function(err, result) {
+		on_next(err, result);
+	});
+}
+
+function biz_update_practise(practise_dao, on_next) {
+	var sql_head = "UPDATE `vds_practise` SET `voc_strength`=?,`voc_score`=?,`voc_deviance`=? WHERE `voc_spell`=?"
+	var sql_values = [
+		practise_dao.voc_strength,
+		practise_dao.voc_score,
+		practise_dao.voc_deviance,
+		practise_dao.voc_spell
+	];
+	mysql_connection.query(sql_head, sql_values, function(err, result) {
+	    on_next(err, result);
+	});
+}
+
+function deduct_practise_deviance(on_finish) {
+	var sql_head = "UPDATE `vds_practise` SET `voc_deviance`=`voc_deviance`-1 WHERE `voc_deviance`>0";
+	mysql_connection.query(sql_head, [], function(err, result) {
+	    on_finish(err, result);
+	});
+}
+
+function set_min_practise_deviance(on_finish) {
+	var sql_head = "UPDATE `vds_practise` SET `voc_deviance`=0 WHERE `voc_deviance`<0";
+	mysql_connection.query(sql_head, [], function(err, result) {
+	    on_finish(err, result);
+	});
+}
 
 /*
 new_words(json):
@@ -352,11 +400,17 @@ module.exports = {
 	biz_insert_word_section,
 	biz_query_word_info,
 	biz_query_section_by_word,
+	biz_query_practise,
+	biz_update_practise,
+	insert_new_practise_word,
 	query_all_sections,
 	query_word_by_groupinfo,
 	insert_bind_word_section,
 	search_words,
 	query_word_info,
+	deduct_practise_deviance,
+	set_min_practise_deviance,
+
 	deinit,
 
 	transact_stat_CONTINUE,

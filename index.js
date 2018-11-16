@@ -2,6 +2,7 @@ const express = require('express');
 const url = require('url');
 const api_impl = require('./core/api_impl.js');
 const dal_impl = require('./core/dal_impl.js');
+const timer_impl = require('./core/timer_impl.js');
 const __step__ = require('./thirdparty/step.js');
 
 var __mock_session = {
@@ -22,6 +23,10 @@ function init() {
 				throw err;
 			/*[2] Init api module */
 			api_impl.init(this);
+
+			/* Init schedule */
+			timer_impl.init();
+			
 		},
 
 		function __i3(prvst) {
