@@ -68,6 +68,8 @@ function __transact_machine(session, func, data) {
 					else if(step == 1) {
 						final_result["section"] = result;
 					}
+					console.log("TANSACTION STEP - ", step, "[DONE]", result);
+					return dal.transact_stat_CONTINUE;
 				},
 				function (err, finished) {
 					if(finished) {
